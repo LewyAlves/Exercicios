@@ -4,23 +4,24 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Bem vindo a seu programa de exercicios, vamos lá?");
         Scanner leitor = new Scanner(System.in);
-        var resposta = 0;
+        var resposta = 1;
         var desafios = """
+                 10: Todos
                  1: Conversor de temperatura
                  2: Media salarial
                  3: Quantidade de azulejos para parede
                  4: Calculo de volume de uma lata de óleo
                  5: Calculando o valor da conta de luz
-                 6: Sair
-                 0: Todos
+                 6: Calculando valor a gastar com gasolina para viajar
+                 0: Sair
                  """;
 
-         while (resposta != 6){
+         while (resposta != 0){
              System.out.println("");
              System.out.println("Qual desafio deseja ver?");
              System.out.println(desafios);
              resposta = leitor.nextInt();
-             if (resposta == 0){
+             if (resposta == 10){
                  System.out.println("Desafio 1: Conversor de temperatura");
                  ConversorDeTemperatura conversor = new ConversorDeTemperatura();
                  conversor.temperaturasEConversoes(21);
@@ -53,6 +54,16 @@ public class Main {
                  System.out.println("Desafio 5: Calculando o valor da conta de luz");
                  ContaDeLuz contaDeLuz = new ContaDeLuz();
                  contaDeLuz.calculoDaConta(5140,5053);
+
+                 System.out.println("");
+
+                 System.out.println("Desafio 06: Calculando valor a gastar com gasolina para viajar");
+                 CalculaGasolina calculaGasolina = new CalculaGasolina();
+                 //x = distancia em km a percorrer && y = litros por km que o automóvel escolhido faz
+                 calculaGasolina.calculo(4688, 15);
+
+                 System.out.println("");
+
              } else if (resposta == 1) {
                  System.out.println("Desafio 1: Conversor de temperatura");
                  ConversorDeTemperatura conversor = new ConversorDeTemperatura();
@@ -78,6 +89,11 @@ public class Main {
                  System.out.println("Desafio 5: Calculando o valor da conta de luz");
                  ContaDeLuz contaDeLuz = new ContaDeLuz();
                  contaDeLuz.calculoDaConta(5140,5053);
+             } else if (resposta == 6) {
+                 System.out.println("Desafio 06: Calculando valor a gastar com gasolina para viajar");
+                 CalculaGasolina calculaGasolina = new CalculaGasolina();
+                 //x = distancia em km a percorrer && y = litros por km que o automóvel escolhido faz
+                 calculaGasolina.calculo(4688, 15);
              }
          }
     }
