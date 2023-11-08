@@ -16,6 +16,7 @@ O projeto é organizado em pastas, cada uma contendo exercícios específicos re
 - `Desafio03/`: Quantidade de azulejos para parede.
 - `Desafio04/`: Calculo de volume de uma lata de óleo.
 - `Desafio05/`: Calculando o valor da conta de luz
+- `Desafio06/`: Calculando valor a gastar com gasolina para viajar
 
 ## Pré-requisitos
 
